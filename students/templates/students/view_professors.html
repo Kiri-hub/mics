@@ -1,18 +1,37 @@
 {% extends "students/base.html" %}
-
+{% load static %}
 {% block title %}Homepage - MICS{% endblock %}
-
 {% block content %}
-  <div class="text-center">
-    <h2 class="text-muted">All Professors</h2>
-  </div>
-  {% for professor_id, professor_info in professors.items %}
-    <div class="row my-5 align-items-center justify-content-center">
-      <div class="col-lg-8">
-        <div class="card" onclick="window.location='{% url 'view_professor' professor_id %}'" style="cursor: pointer;">
-          <div class="card-body text-center">{{ professor_info.name }} {{ professor_info.surname }}</div>
-        </div>
+
+  <div class="container-fluid d-flex flex-column align-items-center justify-content-center">
+    <div class="hero-content">
+      <h2>All Professors</h2>
+    </div>
+    <div class="row g-4 my-5 justify-content-center">
+      <div class="col-12 col-md-6 col-lg-4">
+          <div class="card about-card text-center p-4 h-100">
+              <img src="{% static 'students/images/kirill.jpg' %}"
+                   class="rounded-circle card-coach-img mx-auto mb-3">
+              <h5 class="card-title">Артем</h5>
+              <p class="text-warning">КМС</p>
+
+              <p class="card-text">
+                  Активний турнірний практик, навчає мислити як переможець та приймати сильні рішення
+              </p>
+          </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-cente">
+          <div class="card about-card text-center p-4 h-100">
+              <img src="{% static 'students/images/kirill.jpg' %}"
+                   class="rounded-circle card-coach-img mx-auto mb-3">
+              <h5 class="card-title">Артем</h5>
+              <p class="text-warning">КМС</p>
+
+              <p class="card-text">
+                  Активний турнірний практик, навчає мислити як переможець та приймати сильні рішення
+              </p>
+          </div>
       </div>
     </div>
-  {% endfor %}
+  </div>
 {% endblock %}

@@ -1,0 +1,510 @@
+body {
+    background: linear-gradient(135deg, #0f0c29, #1e1b4b, #312e81);
+    color: white;
+}
+
+.button-accent {
+    background: #f59e0b;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+    box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4);
+}
+
+.button-accent:hover {
+    background: #d97706;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4);
+}
+
+.button-accent:active {
+    transform: scale(0.97);
+}
+
+.bg_picture {
+    width: 100%;
+    min-height: 93.6vh;
+
+    /*background-image: url("/static/landing/images/bg_main_modern.png");*/
+    background-image: url("/static/landing/images_webp/bg_main_modern.webp");
+    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+.bg_picture::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(0,0,0,0) 40%,
+        rgba(0,0,0,0.6) 100%
+    );
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #ede9fe, #fdf4ff);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.custom-navbar {
+    background: linear-gradient(135deg, #0f0c29, #1e1b4b, #312e81);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.nav-link.active {
+    color: #ffc107 !important;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #ffc107 !important;
+}
+
+.custom-navbar .navbar-brand:hover {
+    color: #ffc107 !important;
+}
+
+.height_for_align_of_bg {
+    min-height: 93.6vh;
+}
+
+.hero_text {
+    position: relative;
+    z-index: 1;
+    margin-right: 80px;
+    margin-left: 80px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+
+.gradient-text .hero-content h1 {
+    color: #fff;
+    text-shadow:
+        0 1px 4px rgba(0,0,0,0.5),
+        0 0 4px rgba(255,255,255,0.25);
+}
+
+@media (max-width: 768px) {
+    .hero-content .h2 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+}
+
+.form-card {
+    max-width: 500px;
+    margin: auto;
+
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+.form-title {
+    color: white;
+    font-weight: 700;
+}
+
+.form-card input {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: white;
+    border-radius: 10px;
+    padding: 10px 12px;
+}
+
+.form-card input::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+.form-card input:focus {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 2px rgba(139,92,246,0.3);
+    outline: none;
+}
+
+.form-card label {
+    color: rgba(255,255,255,0.85);
+}
+
+.custom-check input {
+    accent-color: #8b5cf6;
+}
+
+.step {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: #fbbf24;
+    color: #000;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq-section {
+    background: linear-gradient(135deg, #0f0c29, #1e1b4b);
+}
+
+.accordion-item {
+    background: rgba(255,255,255,0.05);
+    border: none;
+    margin-bottom: 10px;
+}
+
+.accordion-button {
+    background: transparent;
+    color: white;
+}
+
+.accordion-button:not(.collapsed) {
+    background: rgba(255,255,255,0.08);
+    color: white;
+}
+
+.accordion-body {
+    color: rgba(255,255,255,0.8);
+}
+
+.footer {
+    background: #0a0820;
+    color: white;
+}
+
+.footer a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #f59e0b;
+}
+
+
+.floating-cta {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: #f59e0b;
+    color: #1a1a1a;
+
+    padding: 14px 28px;
+    border-radius: 999px;
+    font-weight: 600;
+
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4);
+
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* коли активна */
+.floating-cta.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* hover */
+.floating-cta:hover {
+    background: #d97706;
+    transform: translateX(-50%) translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .floating-cta {
+        width: 90%;
+        text-align: center;
+    }
+}
+
+
+
+.contact-card {
+    background: rgba(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+/* контакти */
+.contact-info {
+    background: rgba(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.contact-info i {
+    color: #fbbf24;
+    margin-right: 10px;
+}
+
+.contact-info a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #f59e0b;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.contact_bg_picture {
+    width: 100%;
+    /*background-image: url("/static/landing/images/contact_form_bg.png");*/
+    background-image: url("/static/landing/images_webp/contact_form_bg.webp");
+    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+.about-section {
+    color: white;
+}
+
+.coach-img {
+    border: 3px solid rgba(255,255,255,0.1);
+}
+
+.yellow_text {
+    color: #f59e0b;
+}
+
+.bg_picture_about {
+    width: 100%;
+    min-height: 93.6vh;
+
+    background-image: url("/static/landing/images_webp/mics_team_bg.webp");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.bg_picture_about::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0) 30%,
+        rgba(10,10,30,0.5) 65%,
+        rgba(10,10,30,0.8) 100%
+    );
+}
+
+@media (max-width: 768px) {
+    .bg_picture_about {
+        background-image: url("/static/landing/images_webp/team_mobile.webp");
+        background-size: cover;
+        background-position: center top;
+    }
+}
+
+@media (max-width: 768px) {
+    .bg_picture {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .bg_picture::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 1) 0%,     /* темно зліва */
+            rgba(0, 0, 0, 0.5) 30%,
+            rgba(0, 0, 0, 0.2) 60%,
+            rgba(0, 0, 0, 0.1) 95%     /* прозоро справа */
+        );
+
+        z-index: 1;
+    }
+
+    .bg_picture * {
+        position: relative;
+        z-index: 2; /* щоб текст був поверх */
+    }
+}
+
+.about-card.main {
+    transform: scale(1.05);
+    border: 2px solid #f59e0b;
+    box-shadow: 0 10px 40px rgba(255, 193, 7, 0.3);
+}
+
+.about-icon {
+    font-size: 28px;
+}
+
+@media (max-width: 768px) {
+    .hero_text {
+        margin: 0 16px;
+    }
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+
+body {
+    background: linear-gradient(135deg, #0f0c29, #1e1b4b, #312e81);
+    color: white;
+}
+
+.hero-content p {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+.hero-list li {
+    margin-bottom: 12px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-list i {
+    margin-right: 10px;
+    color: #ffc107;
+}
+
+.hero-content .h2 {
+    font-size: 24px;
+}
+
+.hero-content th {
+    font-size: 20px;
+    opacity: 0.9;
+    color: white
+}
+
+.hero-content td {
+    font-size: 20px;
+    opacity: 0.9;
+    color: white;
+}
+
+.hero-content tbody tr{
+    cursor: pointer;
+}
+
+.hero-content tbody tr:hover {
+    transition: all 0.25s ease;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4);
+    background-color: #ffc107 !important;
+    color: black !important;
+}
+
+.hero-content tbody tr:hover td,
+.hero-content tbody tr:hover th {
+    color: black !important;
+}
+
+.table th,
+.table td {
+    border-bottom: 1px solid black;
+}
+
+
+.about-section {
+    color: white;
+}
+
+.about-title {
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.about-subtitle {
+    opacity: 0.8;
+    font-size: 30px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* 🔥 Кастом для Bootstrap card */
+.about-card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    color: white;
+    width: 100%;
+    max-width: 320px;
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255,255,255,0.08);
+}
+
+/* іконки */
+.about-card i {
+    font-size: 32px;
+    color: #fbbf24;
+}
+
+/* текст */
+.card-title {
+    font-weight: 600;
+}
+
+.card-text {
+    opacity: 0.8;
+}
+
+.card-coach-img {
+    width: 100%;
+    min-width: 260px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}

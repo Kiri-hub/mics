@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'mics.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'micsdb',
+        'NAME': 'MicsDB',
         'USER': 'postgres',
         'PASSWORD': 'vq34v2gx',
         'HOST': 'localhost',
