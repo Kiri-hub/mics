@@ -11,4 +11,5 @@ urlpatterns = [
     path('view-professor/<int:pk>/', views.view_professor, name="view_professor"),
     path('view-professors/', views.view_professors, name="view_professors"),
     path('create-professor/', views.create_professor, name="create_professor"),
+    path('export-students-excel/', views.export_students_excel, name="export_students_excel"),
 ]
