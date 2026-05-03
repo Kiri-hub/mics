@@ -58,7 +58,7 @@ ROOT_URLCONF = 'mics.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'mics.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'MicsDB',
+        'NAME': 'micsdb',
         'USER': 'postgres',
         'PASSWORD': 'vq34v2gx',
         'HOST': 'localhost',
@@ -130,3 +130,5 @@ MEDIA_URL = '/midia/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
